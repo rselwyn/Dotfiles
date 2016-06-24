@@ -1,0 +1,4 @@
+dir=$(pwd)
+cd ..
+sublime $dir
+cd -

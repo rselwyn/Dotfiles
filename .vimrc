@@ -155,3 +155,7 @@ map <leader>m :tabnext<cr>
 " Mapping for moving windows
 map <leader>wu <C-w>k<cr>
 map <leader>wd <C-w>j<cr>
+
+" Automatically close NERDTree if it is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
